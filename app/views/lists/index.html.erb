@@ -1,0 +1,7 @@
+<h1>Lists#index</h1>
+
+<% @lists.each do |list| %>
+  <div class="card">
+    <p><%= link_to list.name, list_path(list[:id]) %></p>
+  </div>
+<% end %>
