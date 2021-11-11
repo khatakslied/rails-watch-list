@@ -1,7 +1,14 @@
-<h1>Lists#index</h1>
+<div class="container">
+  <h1>Movie Lists</h1>
+  <h3><%= link_to "Create a list", new_list_path %></h3>
 
-<% @lists.each do |list| %>
-  <div class="card">
-    <p><%= link_to list.name, list_path(list[:id]) %></p>
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="col-3">
+        <div class="card p-3 m-1">
+          <h3><%= link_to list.name, list_path(list[:id]) %></h3>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>

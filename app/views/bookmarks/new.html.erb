@@ -1,6 +1,9 @@
-<h1>Bookmarks#new</h1>
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.association :movie %>
-  <%= f.input :comment %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container">
+  <h1>Add a movie</h1>
+  <h3><%= link_to "Back", list_path(@list) %></h3>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.association :movie %>
+    <%= f.input :comment %>
+    <%= f.button :submit, "Add movie" %>
+  <% end %>
+</div>
