@@ -2,3 +2,13 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+@import "link";
+@import "genre-card";
+
+h1, h2, h3, p {
+  text-shadow: 0 1px 1px $light-gray;
+}
+
+h1 {
+  font-size: 4em;
+}

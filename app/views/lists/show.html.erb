@@ -1,11 +1,11 @@
 <div class="container">
 <h1><%= @list.name %></h1>
-<h3><%= link_to "Add a movie", "/lists/#{@list.id}/bookmarks/new" %></h3>
-<h3><%= link_to "Back", lists_path %></h3>
+<h3 class="p-2"><%= link_to "Add a movie", "/lists/#{@list.id}/bookmarks/new" %></h3>
+<h3 class="p-2"><%= link_to "Back", lists_path %></h3>
   <div class="row mb-4">
     <% @list.movies.each do |movie| %>
       <div class="col-4">
-        <div class="card p-3 m-1 h-100 border-light">
+        <div class="card p-3 m-1 h-100 border-light shadow-sm">
           <%= image_tag movie.poster_url , alt: "test", class: "img-fluid m-2"%>
           <h2><%= movie.title %></h2>
           <p><%= movie.overview %></p>
